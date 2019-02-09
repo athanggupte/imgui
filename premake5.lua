@@ -1,9 +1,18 @@
 project "ImGui"
+<<<<<<< docking
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
 
 <<<<<<< docking
+=======
+    kind "StaticLib"
+    language "C++"
+    
+    targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+    objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+>>>>>>> Added premake file.
     files
     {
         "imconfig.h",
@@ -25,6 +34,7 @@ project "ImGui"
         
     filter { "system:windows", "configurations:Release" }
         buildoptions "/MT"
+<<<<<<< docking
 =======
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -53,6 +63,8 @@ project "ImGui"
 =======
 		staticruntime(WinCRunTime_Type)
 >>>>>>> Static Runtime variable
+=======
+>>>>>>> Added premake file.
 
 	filter "system:linux"
 		pic "On"
