@@ -1,5 +1,6 @@
 project "ImGui"
 <<<<<<< docking
+<<<<<<< docking
 	kind "StaticLib"
 	language "C++"
 	cppdialect "C++17"
@@ -36,6 +37,11 @@ project "ImGui"
         buildoptions "/MT"
 <<<<<<< docking
 =======
+=======
+	kind "StaticLib"
+	language "C++"
+
+>>>>>>> Added support for linux
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
@@ -47,7 +53,10 @@ project "ImGui"
 		"imgui_draw.cpp",
 		"imgui_internal.h",
 		"imgui_widgets.cpp",
+<<<<<<< docking
         "imgui_tables.cpp",
+=======
+>>>>>>> Added support for linux
 		"imstb_rectpack.h",
 		"imstb_textedit.h",
 		"imstb_truetype.h",
@@ -57,6 +66,7 @@ project "ImGui"
 	filter "system:windows"
 		systemversion "latest"
 <<<<<<< docking
+<<<<<<< docking
 		cppdialect "C++17"
 		staticruntime "On"
 >>>>>>> Added support for linux
@@ -65,6 +75,10 @@ project "ImGui"
 >>>>>>> Static Runtime variable
 =======
 >>>>>>> Added premake file.
+=======
+		cppdialect "C++17"
+		staticruntime "On"
+>>>>>>> Added support for linux
 
 	filter "system:linux"
 		pic "On"
@@ -78,3 +92,6 @@ project "ImGui"
 	filter "configurations:Release"
 		runtime "Release"
 		optimize "on"
+
+    filter { "system:windows", "configurations:Release" }
+        buildoptions "/MT"
