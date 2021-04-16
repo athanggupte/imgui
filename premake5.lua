@@ -54,9 +54,13 @@ project "ImGui"
 		"imgui_internal.h",
 		"imgui_widgets.cpp",
 <<<<<<< docking
+<<<<<<< docking
         "imgui_tables.cpp",
 =======
 >>>>>>> Added support for linux
+=======
+        "imgui_tables.cpp",
+>>>>>>> Update Premake
 		"imstb_rectpack.h",
 		"imstb_textedit.h",
 		"imstb_truetype.h",
