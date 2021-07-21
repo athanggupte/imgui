@@ -71,6 +71,7 @@ project "ImGui"
 		systemversion "latest"
 <<<<<<< docking
 <<<<<<< docking
+<<<<<<< docking
 		cppdialect "C++17"
 		staticruntime "On"
 >>>>>>> Added support for linux
@@ -83,6 +84,9 @@ project "ImGui"
 		cppdialect "C++17"
 		staticruntime "On"
 >>>>>>> Added support for linux
+=======
+		staticruntime(WinCRunTime_Type)
+>>>>>>> Static Runtime variable
 
 	filter "system:linux"
 		pic "On"
