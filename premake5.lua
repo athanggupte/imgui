@@ -67,6 +67,10 @@ project "ImGui"
 		"imgui_demo.cpp"
 	}
 
+   includedirs {
+       "../freetype/include"
+   }
+
 	filter "system:windows"
 		systemversion "latest"
 <<<<<<< docking
