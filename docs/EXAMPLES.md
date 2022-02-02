@@ -141,10 +141,6 @@ GLUT (e.g., FreeGLUT on Linux/Windows, GLUT framework on OSX) + OpenGL2 example.
 = main.cpp + imgui_impl_glut.cpp + imgui_impl_opengl2.cpp <BR>
 Note that GLUT/FreeGLUT is largely obsolete software, prefer using GLFW or SDL.
 
-[example_marmalade/](https://github.com/ocornut/imgui/blob/master/examples/example_marmalade/) <BR>
-Marmalade example using IwGx. <BR>
-= main.cpp + imgui_impl_marmalade.cpp
-
 [example_null/](https://github.com/ocornut/imgui/blob/master/examples/example_null/) <BR>
 Null example, compile and link imgui, create context, run headless with no inputs and no graphics output. <BR>
 = main.cpp <BR>
@@ -226,7 +222,7 @@ If you are interested in using Cmake to build and links examples, see:
 **About mouse cursor latency**
 
 Dear ImGui has no particular extra lag for most behaviors,
-e.g. the value of 'io.MousePos' provided at the time of NewFrame() will result in windows being moved
+e.g. the last value passed to 'io.AddMousePosEvent()' before NewFrame() will result in windows being moved
 to the right spot at the time of EndFrame()/Render(). At 60 FPS your experience should be pleasant.
 
 However, consider that OS mouse cursors are typically drawn through a very specific hardware accelerated
